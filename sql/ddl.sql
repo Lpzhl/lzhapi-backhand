@@ -1,8 +1,8 @@
 -- 创建库
-create database if not exists my_db;
+create database if not exists lzhapi;
 
 -- 切换库
-use my_db;
+use lzhapi;
 
 -- 用户表
 create table if not exists user
@@ -22,7 +22,7 @@ create table if not exists user
 ) comment '用户';
 
 -- 帖子表
-create table if not exists post
+create table if not exists interfaceinfo
 (
     id            bigint auto_increment comment 'id' primary key,
     age           int comment '年龄',

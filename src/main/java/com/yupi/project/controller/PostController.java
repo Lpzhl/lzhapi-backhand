@@ -18,6 +18,8 @@ import com.yupi.project.model.entity.User;
 import com.yupi.project.model.vo.PostVO;
 import com.yupi.project.service.PostService;
 import com.yupi.project.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -39,6 +41,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/post")
 @Slf4j
+@Api(tags = "帖子模块")
 public class PostController {
 
     @Resource

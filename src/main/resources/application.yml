@@ -23,7 +23,7 @@ spring:
 server:
   port: 7529
   servlet:
-    context-path: /api
+    context-path: /api   #上下文路径是应用程序部署在Web服务器上时的根路径  程序将通过http://localhost:7529/api/访问
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false

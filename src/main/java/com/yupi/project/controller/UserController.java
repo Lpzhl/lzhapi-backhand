@@ -13,6 +13,7 @@ import com.yupi.project.model.dto.user.*;
 import com.yupi.project.model.entity.User;
 import com.yupi.project.model.vo.UserVO;
 import com.yupi.project.service.UserService;
+import io.swagger.annotations.Api;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,7 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/user")
+@Api(tags = "用户模块")
 public class UserController {
 
     @Resource

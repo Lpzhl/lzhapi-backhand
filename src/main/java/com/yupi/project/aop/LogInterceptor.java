@@ -41,6 +41,7 @@ public class LogInterceptor {
         // 获取请求参数
         Object[] args = point.getArgs();
         String reqParam = "[" + StringUtils.join(args, ", ") + "]";
+        log.info("======================start===========================");
         // 输出请求日志
         log.info("request start，id: {}, path: {}, ip: {}, params: {}", requestId, url,
                 httpServletRequest.getRemoteHost(), reqParam);
@@ -50,6 +51,7 @@ public class LogInterceptor {
         stopWatch.stop();
         long totalTimeMillis = stopWatch.getTotalTimeMillis();
         log.info("request end, id: {}, cost: {}ms", requestId, totalTimeMillis);
+        log.info("======================end===========================");
         return result;
     }
 }
