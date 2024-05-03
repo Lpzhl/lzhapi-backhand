@@ -21,17 +21,17 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @Slf4j
-//@EnableSwagger2  //含此注解时，Swagger 将扫描您的代码以生成 API 文档，并提供一个用户界面，使您能够浏览和测试您的 API
-//@Profile("dev")
-public class Knife4jConfig extends WebMvcConfigurationSupport {
+@EnableSwagger2  //含此注解时，Swagger 将扫描您的代码以生成 API 文档，并提供一个用户界面，使您能够浏览和测试您的 API
+@Profile("dev")
+public class Knife4jConfig {
 
     @Bean
     public Docket defaultApi2() {
         log.info("准备生成接口文档...");
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
-                        .title("廖梓行 Api") // 修改标题
-                        .description("lzh api") // 修改简介
+                        .title("Api") // 修改标题
+                        .description("api") // 修改简介
                         .version("2.0") // 修改版本
                         .build())
                 .select()
